@@ -455,20 +455,18 @@ class App(tk.Tk):
             array[j+1] = key
             yield array
         return array
-
+    
+    # https://www.geeksforgeeks.org/visualization-of-merge-sort-using-matplotlib/ 'den alınmıştır.
     def mergesort(self, array, start, end):
         if end <= start:
             return
 
         mid = start + ((end - start + 1) // 2) - 1
 
-        # yield from statements have been used to yield
-        # the array from the functions
         yield from self.mergesort(array, start, mid)
         yield from self.mergesort(array, mid + 1, end)
         yield from self.merge(array, start, mid, end)
 
-    # function to merge the array
     def merge(self, array, start, mid, end):
         merged = []
         leftIdx = start
