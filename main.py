@@ -231,7 +231,7 @@ class App(tk.Tk):
             self.graph_canvas.draw()
 
             self.best_time_complexity_label = tk.Label(
-                master=self.inner_main_frame, text="En İyi Zaman : O(n)", font=("Segoe UI", 16, "bold"))
+                master=self.inner_main_frame, text="En İyi Zaman : O(n*n)", font=("Segoe UI", 16, "bold"))
             self.best_time_complexity_label.pack(pady=5)
             self.worst_time_complexity_label = tk.Label(
                 master=self.inner_main_frame, text="En Kötü Zaman : O(n*n)", font=("Segoe UI", 16, "bold"))
